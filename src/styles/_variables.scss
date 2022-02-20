@@ -1,0 +1,18 @@
+@import "./breakpoints", "./colors", "./fonts";
+
+$spacing-md: 16px;
+$spacing-lg: 32px;
+
+$header-height: 50px;
+
+@mixin keyframes-animation($name) {
+    @-webkit-keyframes #{$name} {
+      @content;
+    }
+    @keyframes #{$name} {
+      @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+      }
+  }

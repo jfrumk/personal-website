@@ -1,0 +1,28 @@
+@import "./variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+h1 {
+  font-family: $WorkSans;
+  font-weight: 800;
+  font-size: clamp(1.5rem, 4vw + 1rem, 4rem);
+}
+.subtitle {
+  font-weight: 500;
+  font-size: clamp(1rem, 0.5vw + 1rem, 1.5rem);
+}
+body {
+  color: $dark;
+  font-family: $Raleway;
+}
+.flex-column {
+  flex-direction: column;
+  display: flex;
+}
+
+.center-flex {
+  justify-content: center;
+  align-items: center;
+}
