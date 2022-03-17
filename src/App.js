@@ -1,14 +1,18 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import HeroSection from "./components/HeroSection";
+import Home from "./views/Home";
+import AboutMe from "./views/AboutMe";
+import Contact from "./views/Contact";
 function App() {
   return (
     <>
-      <Navbar />
       <Router>
+        <Navbar />
         <Switch>
-          <Route path="/" exact component={HeroSection} />
+          <Route path="/about-me" exact component={AboutMe} />
+          <Route path="/contact" exact component={Contact} />
+          <Route path="/" exact component={Home} />
         </Switch>
       </Router>
     </>

@@ -25,11 +25,12 @@
     z-index: 100;
 
     &__logo {
-      cursor: pointer;
-      font-size: 2rem;
-      font-weight: bold;
       text-decoration: none;
       color: $dark;
+      & > h2 {
+        font-size: 2rem;
+        font-weight: bold;
+      }
     }
 
     &__nav {

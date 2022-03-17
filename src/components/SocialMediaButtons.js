@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/_socialMediaButtons.scss";
+import "../styles/socialMediaButtons.scss";
 const SocialMediaButtons = () => {
   return (
     <div className="SMcontainer">

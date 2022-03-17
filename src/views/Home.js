@@ -1,8 +1,8 @@
 import React from "react";
-import "../styles/_heroSection.scss";
+import "../styles/home.scss";
 import SocialMediaButtons from "../components/SocialMediaButtons";
-import home_pic from "../home-pic.png";
-function HeroSection() {
+import DownloadButton from "../components/DownloadButton";
+function Home() {
   return (
     <div className="hero-container">
       <div className="gradient-visualizer">
@@ -25,6 +25,7 @@ function HeroSection() {
           creative flair.
         </p>
         <SocialMediaButtons className={"smIcons"} />
+        <DownloadButton />
         <svg
           className="star"
           width="51"
@@ -60,4 +61,4 @@ function HeroSection() {
   );
 }
 
-export default HeroSection;
+export default Home;

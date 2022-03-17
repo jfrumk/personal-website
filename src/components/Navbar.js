@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import classes from "../styles/Navbar.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -35,7 +36,9 @@ const Navbar = () => {
   return (
     <header className={classes.header}>
       <div className={classes.header__content}>
-        <h2 className={classes.header__content__logo}>JF</h2>
+        <Link to="/" className={classes.header__content__logo}>
+          <h2>JF</h2>
+        </Link>
         <nav
           className={`${classes.header__content__nav} ${
             menuOpen && size.width < 768 ? classes.isMenu : ""
@@ -43,13 +46,13 @@ const Navbar = () => {
         >
           <ul>
             <li>
-              <a href="/">Contact</a>
+              <Link to="/contact">Contact</Link>
             </li>
             <li>
-              <a href="/">About Me</a>
+              <Link to="/about-me">About Me</Link>
             </li>
             <li>
-              <a href="/">Skills</a>
+              <Link to="/">Skills</Link>
             </li>
           </ul>
         </nav>
