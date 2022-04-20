@@ -20,7 +20,7 @@ const SocialMediaButtons = () => {
         </svg>
       </a>
       <a
-        href="https://www.linkedin.com/in/jack-frumkes-b9926a19a/"
+        href="https://www.linkedin.com/in/jack-frumkes/"
         className="icon linkedin"
         target="_blank"
         rel="noopener noreferrer"

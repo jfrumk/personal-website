@@ -1,8 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import "../styles/contactForm.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { FaPaperPlane } from "@react-icons/all-files/fa/FaPaperPlane";
 const FORM_ENDPOINT = " ";
 
 const ContactForm = () => {
@@ -44,12 +43,11 @@ const ContactForm = () => {
         method="POST"
         target="_blank"
       >
-        <h2>Contact Me</h2>
         <div className="formInputWrapper">
           <input
             className="formInput"
             type="text"
-            placeholder="Your name"
+            placeholder="Your Name"
             name="name"
             required
           />
@@ -63,10 +61,19 @@ const ContactForm = () => {
             required
           />
         </div>
+        <div className="formInputWrapper">
+          <input
+            className="formInput"
+            type="subject"
+            placeholder="Subject"
+            name="subject"
+            required
+          />
+        </div>
         <div className="formInputWrapper textArea">
           <textarea
             className="formInput"
-            placeholder="Your message"
+            placeholder="Your Message"
             name="message"
             required
           />
@@ -75,7 +82,7 @@ const ContactForm = () => {
           <button type="submit">
             <span>
               {!formLoading ? (
-                <FontAwesomeIcon icon={faPaperPlane} />
+                <FaPaperPlane />
               ) : (
                 <span className="loading"></span>
               )}

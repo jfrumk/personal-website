@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import classes from "../styles/Navbar.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { FaBars } from "@react-icons/all-files/fa/FaBars";
+import { FaTimes } from "@react-icons/all-files/fa/FaTimes";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -61,10 +61,11 @@ const Navbar = () => {
             menuOpen ? classes.menuOpen : ""
           }`}
         >
-          <FontAwesomeIcon
-            icon={menuOpen ? faTimes : faBars}
-            onClick={menuToggleHandler}
-          />
+          {menuOpen ? (
+            <FaTimes onClick={menuToggleHandler} />
+          ) : (
+            <FaBars onClick={menuToggleHandler} />
+          )}
         </div>
       </div>
     </header>

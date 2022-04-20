@@ -45,6 +45,9 @@ $hover-gradient: linear-gradient(
       transform: rotate(-90deg) translateY(calc(50vh - 50%));
       position: absolute;
       right: 0;
+      box-sizing: border-box;
+      outline: $light 2px solid;
+      outline-offset: -2px;
     }
     & > svg {
       animation: move-wave 10s linear infinite;

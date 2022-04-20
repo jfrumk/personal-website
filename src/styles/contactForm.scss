@@ -1,11 +1,11 @@
 @import "./variables";
 .wholeForm {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   width: 100%;
   height: 100%;
+  padding: 30px 0;
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
   &.playAnimation {
@@ -36,29 +36,32 @@
   }
   & > .submitButton button {
     cursor: pointer;
-    margin: 5px;
+    margin-top: 5px;
     padding: 10px 20px;
     font-weight: 600;
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.1rem);
     font-family: $Raleway;
-    background-color: $light-gray;
-    border: none;
+    color: $dark;
+    background-color: change-color($color: $light-gray, $lightness: 95%);
+    border: 2px solid change-color($color: $light-gray, $lightness: 80%);
     border-radius: 3rem;
-    margin-bottom: 50px;
     & > span {
       margin-right: 10px;
-      width: 15px;
-      height: 15px;
+      width: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+      height: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
       display: inline-block;
       position: relative;
+      vertical-align: middle;
+      transform: translateY(-3px);
       & > .loading {
         display: inline-block;
         border-radius: 50%;
         border: 2px solid $dark;
         border-bottom: 2px solid transparent;
         animation: rotate 1s linear infinite;
-        width: 15px;
-        height: 15px;
-        vertical-align: middle;
+        width: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+        height: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
       }
     }
   }
@@ -82,8 +85,10 @@
       }
       font-weight: 600;
       font-family: $Raleway;
+      font-size: 1rem;
+      font-size: clamp(1rem, 0.95rem + 0.25vw, 1.1rem);
       color: $dark;
-      background-color: $light-gray;
+      background-color: change-color($color: $light-gray, $lightness: 95%);
       border-radius: 10px;
       padding: 10px;
       border: 2px solid change-color($color: $light-gray, $lightness: 80%);
