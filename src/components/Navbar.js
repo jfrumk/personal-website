@@ -31,7 +31,6 @@ const Navbar = () => {
 
   const menuToggleHandler = () => {
     setMenuOpen((p) => !p);
-    console.log(`${menuOpen} ${size.width}`);
   };
   return (
     <header className={classes.header}>

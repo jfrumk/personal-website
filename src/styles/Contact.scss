@@ -1,8 +1,12 @@
 @import "./variables";
 .contactFullWrapper {
   display: flex;
-  height: 100vh;
+  flex-direction: column-reverse;
   padding: calc($header-height + 5%) 3% 5% 3%;
+  @include respond-to("mobile-large"){
+    height: 100vh;
+    flex-direction: row;
+  }
   & > .contactFormContainer {
     @include respond-to("mobile-large") {
       width: 40vw;
@@ -29,11 +33,15 @@
           border-box;
       border: 6px solid transparent;
       flex-grow: 1;
-
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: clamp(10rem, 100vh, 30rem);
       width: calc(100% - 40px);
     }
   }
   & > .infoContactContainer {
+    min-height: 30rem;
     display: flex;
     margin: $header-height 0;
     justify-content: center;
@@ -45,5 +53,18 @@
     list-style: none;
     padding-inline-start: 0;
     font-size: clamp(1rem , 1.5vw ,1.2rem);
+    >li{
+      padding: 3px 0;
+      .meetingLink{
+        color: $dark;
+        text-decoration: none;
+        padding: 10px 0;
+        border-top: 3px solid $dark;
+        border-bottom: 3px solid $dark;
+      }
+    }
+    > div{
+      margin: 10px 0;
+    }
   }
 }

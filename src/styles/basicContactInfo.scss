@@ -1,5 +1,8 @@
 @import "./variables";
 .basicContactInfo{
-    border-left: $dark solid 2px;
+    border-left: $dark solid 3px;
     padding-left: 5px;
+    >li{
+        padding: 3px 0;
+      }
 }
