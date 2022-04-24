@@ -1,0 +1,58 @@
+@import "./variables";
+
+.skillChart{
+    list-style: none;
+    margin: 0 10px;
+    height: 100%;
+    width: 100%;
+    padding-inline-start: 0px;
+    & > li{
+        .skillBarWrapper{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 2rem;
+        .skillAndBar{
+            flex-grow: 1;
+            height: 10px;
+            align-items: center;
+            display: flex;
+        .skillBar{
+            display: inline-block;
+            height: 10px;
+            background-color: $purple;
+            margin: 0 10px;
+            border-radius: 99rem;
+            &.Proficient{
+                flex-grow: 1;
+                animation: grow-bar 1s ease-out 1;
+                
+            }
+        }
+    }
+    }
+    @for $i from 1 through 10 {
+        &:nth-child(#{$i}) > .skillBarWrapper > .skillAndBar > .skillBar{
+            animation-delay: #{$i * 0.1}s;
+        }
+        &:nth-child(#{$i}) > .skillBarWrapper > .skillAndBar{
+            animation: appear #{$i * 0.1}s  1;
+        }
+    }
+    }
+}
+
+@include keyframes-animation("appear"){
+    0%,100%{
+        opacity: 0;
+    }
+}
+
+@include keyframes-animation("grow-bar"){
+    0%{
+        flex-grow: 0;
+    }
+    100%{
+        flex-grow: 1;
+    }
+}
