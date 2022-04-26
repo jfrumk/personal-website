@@ -6,12 +6,27 @@ const Skills = () => {
     <div className="skillsWholePage">
       <div className="chartSection">
         <SkillsChart
-          skillNames={["React.js", "HTML", "CSS", "SCSS"]}
+          skillNames={[
+            "React.js",
+            "HTML",
+            "CSS",
+            "SCSS",
+            "Java",
+            "Python",
+            "C/C++",
+            "PHP",
+            "SQL",
+          ]}
           skillProficiency={[
             "Proficient",
             "Proficient",
             "Proficient",
             "Proficient",
+            "Proficient",
+            "Proficient",
+            "Intermediate",
+            "Intermediate",
+            "Familiar",
           ]}
         />
       </div>

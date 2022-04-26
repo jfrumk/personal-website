@@ -2,11 +2,40 @@
 
 .skillChart{
     list-style: none;
-    margin: 0 10px;
+    padding: 0 10px;
     height: 100%;
     width: 100%;
     padding-inline-start: 0px;
     & > li{
+        &:nth-of-type(4n-3){
+            .skillBar{
+            background-color: $purple;
+            }
+        }
+        &:nth-of-type(4n-2){
+            .skillBar{
+            background-color: $blue;
+            }
+        }
+        &:nth-of-type(4n-1){
+            .skillBar{
+            background-color: $green;
+            }
+        }
+        &:nth-of-type(4n){
+            .skillBar{
+            background-color: change-color($light-gray, $lightness: 85%);
+            }
+        }
+        .skillName{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 10px;
+            width: 75px;
+            height: 100%;
+            border-right: 2px $dark solid;
+        }
         .skillBarWrapper{
             display: flex;
             align-items: center;
@@ -19,14 +48,20 @@
             display: flex;
         .skillBar{
             display: inline-block;
-            height: 10px;
-            background-color: $purple;
+            height: 15px;
             margin: 0 10px;
             border-radius: 99rem;
             &.Proficient{
                 flex-grow: 1;
-                animation: grow-bar 1s ease-out 1;
-                
+                animation: grow-bar-prof 1s ease-out 1;
+            }
+            &.Intermediate{
+                flex-grow: 0.7;
+                animation: grow-bar-int 1s ease-out 1;
+            }
+            &.Familiar{
+                flex-grow: 0.3;
+                animation: grow-bar-fam 1s ease-out 1;
             }
         }
     }
@@ -48,11 +83,29 @@
     }
 }
 
-@include keyframes-animation("grow-bar"){
+@include keyframes-animation("grow-bar-prof"){
     0%{
         flex-grow: 0;
     }
     100%{
         flex-grow: 1;
+    }
+}
+
+@include keyframes-animation("grow-bar-int"){
+    0%{
+        flex-grow: 0;
+    }
+    100%{
+        flex-grow: 0.7;
+    }
+}
+
+@include keyframes-animation("grow-bar-fam"){
+    0%{
+        flex-grow: 0;
+    }
+    100%{
+        flex-grow: 0.3;
     }
 }

@@ -7,7 +7,7 @@ const SkillsChart = ({ ...props }) => {
     return (
       <li key={index}>
         <div className="skillBarWrapper">
-          {item}
+          <span className="skillName">{item}</span>
           <div className="skillAndBar">
             <span className={"skillBar " + props.skillProficiency[index]} />
             {props.skillProficiency[index]}
